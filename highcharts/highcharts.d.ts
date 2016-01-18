@@ -4791,6 +4791,7 @@ interface HighchartsPlotOptions {
     spline?: HighchartsSplineChart;
     treemap?: HighchartsTreeMapChart;
     waterfall?: HighchartsWaterFallChart;
+    map?: Object;
 }
 
 /* You will rarely, if ever, want to use this interface directly. Instead it is much more useful to use one of the derived
@@ -5462,52 +5463,9 @@ interface HighchartsOptions {
 
     mapNavigation?: HighMapsMapNavigation;
 }
-/**
- * A collection of options for zooming and panning in a map.
- */
+
 interface HighMapsMapNavigation {
-    /**
-     * General options for the map navigation buttons. Individual options can be given from the mapNavigation.buttons option set.
-     */
-    buttonOptions?: Object;
-    /**     * 
-     * The individual buttons for the map navigation. This usually includes the zoom in and zoom out buttons. 
-     * Properties for each button is inherited from mapNavigation.buttonOptions, while individual options can be overridden. 
-     * But default, the onclick, text and y options are individual.
-     */
-    buttons?: Object;
-    /**
-     * Whether to enable navigation buttons. By default it inherits the enabled setting.     * 
-     */
-    enableButtons?: Boolean;
-    /**
-     * Enables zooming in on an area on double clicking in the map. By default it inherits the enabled setting
-     */
-    enableDoubleClickZoom: Boolean;
-    /**
-     * Whether to zoom in on an area when that area is double clicked. Defaults to false.     * 
-     */
-    enableDoubleClickZoomTo: Boolean;
-    /**
-     * Enables zooming by mouse wheel. By default it inherits the enabled setting.     * 
-     */
-    enableMouseWheelZoom: Boolean;
-    /**
-     * Whether to enable multitouch zooming. Note that if the chart covers the viewport, 
-     * this prevents the user from using multitouch and touchdrag on the web page, so you should make 
-     * sure the user is not trapped inside the chart. By default it inherits the enabled setting.
-     */
-    enableTouchZoom: Boolean;
-    /**
-     * Whether to enable map navigation. The default is not to enable navigation, as many choropleth maps are simple and don't need it. 
-     * Additionally, when touch zoom and mousewheel zoom is enabled, it breaks the default behaviour of these interactions in the website, 
-     * and the implementer should be aware of this.
-     * 
-     * Individual interactions can be enabled separately, namely buttons, multitouch zoom, double click zoom, double click zoom to element 
-     * and mousewheel zoom.
-     * Defaults to false.
-     */
-    enabled: Boolean;
+
 }
 
 interface HighchartsGlobalOptions extends HighchartsOptions {
@@ -6273,6 +6231,8 @@ interface HighchartsSeriesObject {
 
 interface JQuery {
     highcharts(): HighchartsChartObject;
+
+    highcharts(isMap: string, options: HighchartsOptions): JQuery;
     /**
     * Creates a new Highcharts.Chart for the current JQuery selector; usually
     * a div selected by $('#container')
