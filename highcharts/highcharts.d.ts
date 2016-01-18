@@ -111,7 +111,7 @@ interface HighchartsAxisLabels {
      * @since 2.2.5
      * @deprecated
      */
-    overflow?: string|boolean;
+    overflow?: string | boolean;
     /**
      * The pixel padding for axis labels, to ensure white space between them.
      * @default 5
@@ -266,7 +266,7 @@ interface HighchartsPlotBands {
      * @default null
      * @since 2.3
      */
-    innerRadius?: number|string;
+    innerRadius?: number | string;
     /**
      * Text labels for the plot bands
      */
@@ -278,7 +278,7 @@ interface HighchartsPlotBands {
      * @default '100%'
      * @since 2.3
      */
-    outerRadius?: number|string;
+    outerRadius?: number | string;
     /**
      * In a gauge chart, this option sets the width of the plot band stretching along the perimeter. It can be given as
      * a percentage string, like '10%', or as a pixel number, like 10. The default value 10 is the same as the default
@@ -287,7 +287,7 @@ interface HighchartsPlotBands {
      * @default 10
      * @since 2.3
      */
-    thickness?: number|string;
+    thickness?: number | string;
     /**
      * The end position of the plot band in axis units.
      */
@@ -643,7 +643,7 @@ interface HighchartsAxisOptions {
      *
      * On axes using categories, minor ticks are not supported.
      */
-    minorTickInterval?: number|string;
+    minorTickInterval?: number | string;
     /**
      * The pixel length of the minor tick marks.
      * @default 2
@@ -1177,7 +1177,7 @@ interface HighchartsChartEvents {
      * The this keyword refers to the Chart object.
      * @since 1.2.0
      */
-    addSeries?: (event: HighchartsAddSeriesEvent) => boolean|void;
+    addSeries?: (event: HighchartsAddSeriesEvent) => boolean | void;
     /**
      * Fires after a chart is printed through the context menu item or the Chart.print method. Requires the exporting
      * module.
@@ -1770,7 +1770,7 @@ interface HighchartsDataOptions {
      * switchRowsAndColumns is set, the columns are interpreted as series.
      * @since 4.0
      */
-    columns?: [string|number][];
+    columns?: [string | number][];
     /**
      * The callback that is evaluated when the data is finished loading, optionally from an external source, and parsed.
      * The first argument passed is a finished chart options object, containing the series. These options can be
@@ -1853,12 +1853,12 @@ interface HighchartsDataOptions {
      * async.
      * @since 4.0
      */
-    parsed?: (columns: [string|number][]) => boolean | void;
+    parsed?: (columns: [string | number][]) => boolean | void;
     /**
      * The same as the columns input option, but defining rows intead of columns.
      * @since 4.0
      */
-    rows?: [string|number][];
+    rows?: [string | number][];
     /**
      * An array containing object with Point property names along with what column id the property should be taken from.
      * @since 4.0.4
@@ -2749,7 +2749,7 @@ interface HighchartsPaneOptions {
      * @default ['50%', '50%']
      * @since 2.3.0
      */
-    center?: [number|string, number|string];
+    center?: [number | string, number | string];
     /**
      * The end angle of the polar X axis or gauge value axis, given in degrees where 0 is north.
      * @default startAngle + 360
@@ -2989,7 +2989,7 @@ interface HighchartsPlotEvents {
      * The this keyword refers to the Series object.
      * @since 1.2.0
      */
-    checkboxClick?: (event: HighchartsAreaCheckboxEvent) => boolean|void;
+    checkboxClick?: (event: HighchartsAreaCheckboxEvent) => boolean | void;
     /**
      * Fires when the series is clicked. One parameter, event, is passed to the function. This contains common event
      * information based on jQuery or MooTools depending on which library is used as the base for Highcharts.
@@ -3013,7 +3013,7 @@ interface HighchartsPlotEvents {
      *
      * The this keyword refers to the Series object.
      */
-    legendItemClick?: (event: Event) => boolean|void;
+    legendItemClick?: (event: Event) => boolean | void;
     /**
      * Fires when the mouse leaves the graph. One parameter, event, is passed to the function. This contains common
      * event information based on jQuery or MooTools depending on which library is used as the base for Highcharts. If
@@ -3151,7 +3151,7 @@ interface HighchartsPointEvents {
      * The this keyword refers to the Point object.
      * @since 1.2.0
      */
-    remove?: (event: Event) => boolean|void;
+    remove?: (event: Event) => boolean | void;
     /**
      * Fires when the point is selected either programmatically or following a click on the point. One parameter, event,
      * is passed to the function. Returning false cancels the operation.
@@ -3159,7 +3159,7 @@ interface HighchartsPointEvents {
      * The this keyword refers to the Point object.
      * @since 1.2.0
      */
-    select?: (event: Event) => boolean|void;
+    select?: (event: Event) => boolean | void;
     /**
      * Fires when the point is unselected either programmatically or following a click on the point. One parameter,
      * event, is passed to the function. Returning false cancels the operation.
@@ -3167,7 +3167,7 @@ interface HighchartsPointEvents {
      * The this keyword refers to the Point object.
      * @since 1.2.0
      */
-    unselect?: (event: Event) => boolean|void;
+    unselect?: (event: Event) => boolean | void;
     /**
      * Fires when the point is updated programmatically through the .update() method. One parameter, event, is passed to
      * the function. The new point options can be accessed through event.options. Returning false cancels the operation.
@@ -3175,7 +3175,7 @@ interface HighchartsPointEvents {
      * The this keyword refers to the Point object.
      * @since 1.2.0
      */
-    update?: (event: Event) => boolean|void;
+    update?: (event: Event) => boolean | void;
 }
 
 interface HighchartsHalo {
@@ -4251,7 +4251,7 @@ interface HighchartsFunnelChart extends HighchartsSeriesChart {
      * @default ['50%', '50%']
      * @since 3.0
      */
-    center?: [string|number, string|number];
+    center?: [string | number, string | number];
     /**
      * A series specific or series type specific color set to use instead of the global colors.
      * @since 3.0
@@ -4431,7 +4431,7 @@ interface HighchartsLineChart extends HighchartsSeriesChart {
      * @default false
      * @since 1.2.5
      */
-    step?: boolean|string;
+    step?: boolean | string;
 }
 
 /**
@@ -4455,7 +4455,7 @@ interface HighchartsPieChart extends HighchartsSeriesChart {
      * center should be explicitly set, for example to ['50%', '50%'].
      * @default [null, null]
      */
-    center?: [string|number, string|number];
+    center?: [string | number, string | number];
     /**
      * A series specific or series type specific color set to use instead of the global colors.
      * @since 3.0
@@ -4559,7 +4559,7 @@ interface HighchartsPyramidChart extends HighchartsSeriesChart {
      * @default ['50%', '50%']
      * @since 3.0
      */
-    center?: [string|number, string|number];
+    center?: [string | number, string | number];
     /**
      * A series specific or series type specific color set to use instead of the global colors.
      * @since 3.0
@@ -5459,6 +5459,55 @@ interface HighchartsOptions {
      * horizontal axis. In case of multiple axes, the yAxis node is an array of configuration objects.
      */
     yAxis?: HighchartsAxisOptions | HighchartsAxisOptions[];
+
+    mapNavigation?: HighMapsMapNavigation;
+}
+/**
+ * A collection of options for zooming and panning in a map.
+ */
+interface HighMapsMapNavigation {
+    /**
+     * General options for the map navigation buttons. Individual options can be given from the mapNavigation.buttons option set.
+     */
+    buttonOptions?: Object;
+    /**     * 
+     * The individual buttons for the map navigation. This usually includes the zoom in and zoom out buttons. 
+     * Properties for each button is inherited from mapNavigation.buttonOptions, while individual options can be overridden. 
+     * But default, the onclick, text and y options are individual.
+     */
+    buttons?: Object;
+    /**
+     * Whether to enable navigation buttons. By default it inherits the enabled setting.     * 
+     */
+    enableButtons?: Boolean;
+    /**
+     * Enables zooming in on an area on double clicking in the map. By default it inherits the enabled setting
+     */
+    enableDoubleClickZoom: Boolean;
+    /**
+     * Whether to zoom in on an area when that area is double clicked. Defaults to false.     * 
+     */
+    enableDoubleClickZoomTo: Boolean;
+    /**
+     * Enables zooming by mouse wheel. By default it inherits the enabled setting.     * 
+     */
+    enableMouseWheelZoom: Boolean;
+    /**
+     * Whether to enable multitouch zooming. Note that if the chart covers the viewport, 
+     * this prevents the user from using multitouch and touchdrag on the web page, so you should make 
+     * sure the user is not trapped inside the chart. By default it inherits the enabled setting.
+     */
+    enableTouchZoom: Boolean;
+    /**
+     * Whether to enable map navigation. The default is not to enable navigation, as many choropleth maps are simple and don't need it. 
+     * Additionally, when touch zoom and mousewheel zoom is enabled, it breaks the default behaviour of these interactions in the website, 
+     * and the implementer should be aware of this.
+     * 
+     * Individual interactions can be enabled separately, namely buttons, multitouch zoom, double click zoom, double click zoom to element 
+     * and mousewheel zoom.
+     * Defaults to false.
+     */
+    enabled: Boolean;
 }
 
 interface HighchartsGlobalOptions extends HighchartsOptions {
@@ -5474,8 +5523,7 @@ interface HighchartsGlobalOptions extends HighchartsOptions {
     lang?: HighchartsLangObject;
 }
 
-interface HighchartsDateFormatSpecifiers
-{
+interface HighchartsDateFormatSpecifiers {
     [index: string]: (timestamp: number) => string;
 }
 
@@ -5931,7 +5979,7 @@ interface HighchartsRendererObject {
      * @param  {(string|number)[]} path An SVG path split up in array form.
      * @return {HighchartsElementObject}
      */
-    path(path: [string|number]): HighchartsElementObject;
+    path(path: [string | number]): HighchartsElementObject;
     /**
      * Add a rectangle.
      * @param  {number} x The x position of the rectangle's upper left corner.
@@ -6041,7 +6089,7 @@ interface HighchartsPointObject {
      * @param [boolean|HighchartsAnimation] animation Defaults to true. When true, the graph's updating will be animated with default animation options. The animation can also be a configuration object with properties duration and easing.
      * @since 1.2.0
      */
-    remove(redraw?: boolean, animation?: boolean|HighchartsAnimation): void;
+    remove(redraw?: boolean, animation?: boolean | HighchartsAnimation): void;
     /**
      * Select or unselect the point.
      * @param [boolean] select When true, the point is selected. When false, the point is unselected. When null or undefined, the selection state is toggled.
@@ -6067,7 +6115,7 @@ interface HighchartsPointObject {
      * @param [boolean|HighchartsAnimation] animation Defaults to true. When true, the move will be animated with default animation options. The animation can also be a configuration object with properties duration and easing.
      * @since 1.2.0
      */
-    slice(sliced?: boolean, redraw?: boolean, animation?: boolean|HighchartsAnimation): void;
+    slice(sliced?: boolean, redraw?: boolean, animation?: boolean | HighchartsAnimation): void;
     /**
      * The total of a stack for stacked series, or pie in pie charts.
      */
@@ -6116,7 +6164,7 @@ interface HighchartsSeriesObject {
      * @param [(boolean|HighchartsAnimation)=false] animation - When shift is true, one point is shifted off the start of the series as one is appended to the end. Use this option for live charts monitoring a value over time.
      * @since 1.2.0
      */
-    addPoint(options: number |[number, number]| HighchartsDataPoint, redraw?: boolean, shift?: boolean, animation?: boolean | HighchartsAnimation): void;
+    addPoint(options: number | [number, number] | HighchartsDataPoint, redraw?: boolean, shift?: boolean, animation?: boolean | HighchartsAnimation): void;
     /**
      * Read only. The chart that the series belongs to.
      * @since 1.2.0
@@ -6157,7 +6205,7 @@ interface HighchartsSeriesObject {
      * @param [boolean|HighchartsAnimation=true] animation - When true, the graph will be animated with default animation options. The animation can also be a configuration object with properties duration and easing.
      * @since 4.1.0
      */
-    removePoint(index: number, redraw?: boolean, animation?: boolean|HighchartsAnimation): void;
+    removePoint(index: number, redraw?: boolean, animation?: boolean | HighchartsAnimation): void;
     /**
      * Select or unselect the series. This means its selected property is set,the checkbox in the legend is toggled and
      * when selected, the series is returned in the chart.getSelectedSeries() method.
